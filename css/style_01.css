@@ -1,8 +1,33 @@
+/*
+medida mobile: 360px
+medida tablet: 720px
+medida desktop: 1020px  
+*/
+
+* {
+  margin: 0;
+  font-family: 'Alkatra', cursive;
+}
+
 body {
-  font-family: Arial, Verdana, sans-serif;
+  display: grid;
   font-size: 90%;
   color: #666;
-  background-color: #f8f8f8;
+  background-color: midnightblue;
+  backdrop-filter: sepia(60%);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+nav img {
+  margin: 0;
+  width: 100px;
+  height: 100px;
 }
 
 img {
@@ -11,8 +36,14 @@ img {
 }
 
 li {
-  list-style-image: url("../images/icon-plus.png");
+  list-style-image: url("../images/icon-poesia.png");
   line-height: 1.6em;
+}
+
+#scroll {
+  overflow-x: auto;
+  margin: 22px;
+  border-radius: 20px;
 }
 
 table {
@@ -21,16 +52,20 @@ table {
 
 th,
 td {
-  padding: 5px 30px 5px 10px;
+  padding: 5px 4px 5px 4px;
   border-spacing: 0px;
   font-size: 90%;
   margin: 0px;
 }
 
+th img {
+  display: flex;
+}
+
 th,
 td {
   text-align: left;
-  background-color: #e0e8f0;
+  background-color: #547ca0;
   border-top: 1px solid #f1f8fe;
   border-bottom: 1px solid #cbd2d8;
   border-right: 1px solid #cbd2d8;
@@ -38,7 +73,7 @@ td {
 
 tr.head th {
   color: #fff;
-  background-color: #90b4d6;
+  background-color: rgb(212, 212, 101);
   border-bottom: 2px solid #547ca0;
   border-right: 1px solid #749abe;
   border-top: 1px solid #90d4d6;
@@ -53,7 +88,7 @@ td {
 
 tr.even td,
 tr.even th {
-  background-color: #e8eff5;
+  background-color: #dd6945;
 }
 
 tr.head th:first-child {
@@ -66,13 +101,14 @@ fieldset {
   width: 310px;
   margin-top: 20px;
   border: 1px solid #d6d6d6;
-  background-color: #ffffff;
+  background-color: black;
   line-height: 1.6em;
+  color: white;
 }
 
 legend {
   font-style: italic;
-  color: #666666;
+  color: firebrick;
 }
 
 input[type="text"]:focus,
@@ -82,6 +118,7 @@ input[type="text"]:hover {
 }
 
 input[type="submit"] {
+  font-family: 'Alkatra', cursive;
   border: 1px solid #006633;
   background-color: #009966;
   color: #ffffff;
@@ -105,5 +142,11 @@ input[type="submit"]:hover {
 
 .submit {
   width: 310px;
-  text-align: right;
+  text-align: left;
 }
+
+form {
+  margin: 12px auto;
+}
+
+/* Mobile */
