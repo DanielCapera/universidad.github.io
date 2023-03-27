@@ -1,0 +1,263 @@
+* {
+  font-family: "Alkatra", cursive;
+  font-family: "Anton", sans-serif;
+  font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+body {
+  color: #ffffff;
+  background-color: brown;
+  font-size: 20px;
+  margin: 0px;
+  text-align: center;
+}
+
+a {
+  color: #b5c1ad;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.header {
+  background-image: url("/images/bg-header.jpg");
+  padding: 0px 0px 0px 0px;
+  height: 100px;
+  top: 0px;
+  width: 100%;
+  z-index: 50;
+}
+
+.nav {
+  float: right;
+  font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+  padding: 40px 0px 0px 0px;
+  text-align: right;
+}
+
+.wrapper {
+  margin: 0px auto;
+  background-image: url("images/bg-triangle.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  text-align: left;
+}
+
+.grid_3 img {
+  display: block;
+  margin: auto;
+}
+.logo {
+  margin-bottom: 20px;
+}
+
+h1,
+h2 {
+  font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 240%;
+  margin-top: 140px;
+}
+
+.date {
+  font-size: Arial, Helvetica, sans-serif;
+  font-size: 75%;
+  color: #b5c1ad;
+}
+
+.intro {
+  clear: left;
+  font-size: 90%;
+  line-height: 1.4em;
+}
+
+.main-story {
+  background-image: url("images/triangles.png");
+  background-repeat: no-repeat;
+  background-position: 122px 142px;
+  margin: 30px;
+}
+
+.more-articles {
+  border-top: 1px solid #ffffff;
+  padding: 10px;
+}
+
+@media (min-width: 700px) {
+  .more-articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.more-articles p {
+  border-bottom: 1px solid #807c72;
+  padding: 5px 0px 15px 0px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.more-articles p:last-child {
+  border-bottom: none;
+}
+
+.footer {
+  clear: both;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+}
+
+.footer p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 75%;
+  text-align: center;
+}
+
+.footer a {
+  color: #807c72;
+}
+
+/* Hamburguer */
+.main-header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0 0.4rem;
+}
+
+.main-logo {
+  color: black;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  margin-left: -100%;
+  transition: all 0.2s linear;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.main-nav.show {
+  margin-left: 0;
+}
+
+.nav-links {
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.link-item {
+  margin-top: 2rem;
+  color: #444444;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.link-item::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: 0.3s ease all;
+}
+
+.link-item:hover::after {
+  width: 100%;
+}
+
+.button-menu {
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  background: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-menu span {
+  width: 37px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #444444;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: all 0.2s linear;
+}
+
+.button-menu.close span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, 0px);
+  background: #ffffff;
+}
+
+.button-menu.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.button-menu.close span:nth-child(3) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+
+  .main-logo {
+    flex-basis: 30%;
+  }
+
+  .main-nav {
+    position: static;
+    margin-left: 0;
+    flex-basis: 70%;
+    height: 100%;
+  }
+
+  .main-header {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: block;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    background: black;
+  }
+
+  .link-item {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 2rem;
+  }
+}
